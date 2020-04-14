@@ -15,7 +15,7 @@
 					<el-submenu index="1" style="text-align: left;text-indent: 10px;">
 						<template slot="title">
 							<i class="el-icon-goods"></i>
-							<span>供应商</span>
+							<span>普通表单</span>
 						</template>
 						<el-menu-item-group style="text-indent: 20px;">
 							<el-menu-item index="3-1" @click="supplier">供应商管理</el-menu-item>
@@ -25,7 +25,7 @@
 					<el-submenu index="2" style="text-align: left;text-indent: 10px;">
 						<template slot="title">
 							<i class="el-icon-document"></i>
-							<span>面料管理</span>
+							<span>图表页</span>
 						</template>
 						<el-menu-item-group style="text-indent: 20px;">
 							<el-menu-item index="1-1" @click="fenxi">分析页</el-menu-item>
@@ -36,7 +36,7 @@
 					<el-submenu index="3" style="text-align: left;text-indent: 10px;">
 						<template slot="title">
 							<i class="el-icon-news"></i>
-							<span>（款号档案管理）表单页</span>
+							<span>表单页</span>
 						</template>
 						<el-menu-item-group style="text-indent: 20px;">
 							<el-menu-item index="2-1" @click='basicForm'>基础表单</el-menu-item>
@@ -48,7 +48,7 @@
 					<el-submenu index="4" style="text-align: left;text-indent: 10px;">
 						<template slot="title">
 							<i class="el-icon-tickets"></i>
-							<span>（色号管理）详情页</span>
+							<span>详情页</span>
 						</template>
 						<el-menu-item-group style="text-indent: 20px;">
 							<el-menu-item index="4-1" @click="basisDetail">基础详情页</el-menu-item>
@@ -138,7 +138,7 @@
 				this.$router.push({path:"/pages/stepForm"})
 			},
 			supplier(){
-				this.$router.push({path:"/supplier/supplier"})
+				this.$router.push({path:"/pages/supplier/supplier"})
 			},
 			basisDetail(){
 				this.$router.push({path:"/detail/basisDetail"})

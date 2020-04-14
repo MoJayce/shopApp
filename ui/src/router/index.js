@@ -12,13 +12,13 @@ const monitoring = resolve => { require(['../pages/monitoring'], resolve) };   /
 const working = resolve => { require(['../pages/working'], resolve) };   //working
 const basicForm = resolve => { require(['../pages/basicForm'], resolve) };   //basicForm
 const stepForm = resolve => { require(['../pages/stepForm'], resolve) };   //stepForm
-const supplier = resolve => { require(['../supplier/supplier'], resolve) };   //supplier供应商
-const addSupplier = resolve => { require(['../supplier/addSupplier'], resolve) };   //addSupplier新增供应商
-const updateSupplier = resolve => { require(['../supplier/updateSupplier'], resolve) };   //updateSupplier修改供应商
+const supplier = resolve => { require(['../pages/supplier/supplier'], resolve) };   //supplier供应商
+const addSupplier = resolve => { require(['../pages/supplier/addSupplier'], resolve) };   //addSupplier新增供应商
+const updateSupplier = resolve => { require(['../pages/supplier/updateSupplier'], resolve) };   //updateSupplier修改供应商
 
-const basisDetail = resolve => { require(['../detail/basisDetail'], resolve) };   //search
+const basisDetail = resolve => { require(['../pages/detail/basisDetail'], resolve) };   //search
 const results = resolve => { require(['../pages/results'], resolve) };   //results
-const standard = resolve => { require(['../supplier/standard'], resolve) };   //standard 
+const standard = resolve => { require(['../pages/supplier/standard'], resolve) };   //standard 
 
 
 
@@ -28,6 +28,7 @@ const standard = resolve => { require(['../supplier/standard'], resolve) };   //
 Vue.use(Router);
 
 export default new Router({
+	mode: 'history',
 	routes: [{
 		path: '/',
 		redirect: '/welcome'	//如果地址为空时重定向为 /index
@@ -41,12 +42,12 @@ export default new Router({
 			{ path: '/pages/monitoring', component: monitoring },
 			{ path: '/pages/working', component: working },
 			{ path: '/pages/basicForm', component: basicForm },
-			{ path: '/supplier/supplier', component: supplier },//供应商管理
-			{ path: '/supplier/addSupplier', component: addSupplier },//新增供应商
-			{ path: '/supplier/updateSupplier', component: updateSupplier },//修改供应商
+			{ path: '/pages/supplier/supplier', component: supplier },//供应商管理
+			{ path: '/pages/supplier/addSupplier', component: addSupplier },//新增供应商
+			{ path: '/pages/supplier/updateSupplier', component: updateSupplier },//修改供应商
 			{ path: '/pages/stepForm', component: stepForm },
 			{ path: '/detail/basisDetail', component: basisDetail },
-			{ path: '/supplier/standard', component: standard },
+			{ path: '/pages/supplier/standard', component: standard },
 		]
 	},
 	{
